@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3AA29F9C-C740-4146-AA2B-9D0ADA69A989}</ProjectGuid>
+    <ProjectGuid>{4538E8A9-5BEC-406E-9ECD-DDC8A8548BB9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>SPT</RootNamespace>
     <AssemblyName>SPT</AssemblyName>
@@ -53,6 +53,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
