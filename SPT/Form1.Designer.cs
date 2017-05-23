@@ -71,8 +71,9 @@
             this.tafCbVon.Location = new System.Drawing.Point(221, 48);
             this.tafCbVon.Name = "tafCbVon";
             this.tafCbVon.Size = new System.Drawing.Size(236, 33);
-            this.tafCbVon.TabIndex = 7;
+            this.tafCbVon.TabIndex = 5;
             this.tafCbVon.DropDown += new System.EventHandler(this.tafCbVon_DropDown);
+            this.tafCbVon.Enter += new System.EventHandler(this.tafCbVon_Enter);
             // 
             // tafBtnSuchen
             // 
@@ -115,8 +116,9 @@
             this.conCbBis.Location = new System.Drawing.Point(507, 49);
             this.conCbBis.Name = "conCbBis";
             this.conCbBis.Size = new System.Drawing.Size(254, 33);
-            this.conCbBis.TabIndex = 6;
+            this.conCbBis.TabIndex = 2;
             this.conCbBis.DropDown += new System.EventHandler(this.conCbBis_DropDown);
+            this.conCbBis.Enter += new System.EventHandler(this.conCbVon_Enter);
             // 
             // conCbVon
             // 
@@ -124,8 +126,9 @@
             this.conCbVon.Location = new System.Drawing.Point(221, 49);
             this.conCbVon.Name = "conCbVon";
             this.conCbVon.Size = new System.Drawing.Size(236, 33);
-            this.conCbVon.TabIndex = 5;
+            this.conCbVon.TabIndex = 1;
             this.conCbVon.DropDown += new System.EventHandler(this.conCbVon_DropDown);
+            this.conCbVon.Enter += new System.EventHandler(this.conCbVon_Enter);
             // 
             // conBtnSuchen
             // 
@@ -145,6 +148,7 @@
             this.conDtpDateTime.Name = "conDtpDateTime";
             this.conDtpDateTime.Size = new System.Drawing.Size(236, 31);
             this.conDtpDateTime.TabIndex = 3;
+            this.conDtpDateTime.Enter += new System.EventHandler(this.conCbVon_Enter);
             // 
             // conLblDatumZeit
             // 

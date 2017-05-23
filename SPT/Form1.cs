@@ -118,5 +118,15 @@ namespace SPT
                 dgvVerbindungen.Rows.Add(row);
             }
         }
+
+        private void conCbVon_Enter(object sender, EventArgs e)
+        {
+            this.AcceptButton = conBtnSuchen;
+        }
+
+        private void tafCbVon_Enter(object sender, EventArgs e)
+        {
+            this.AcceptButton = tafBtnSuchen;
+        }
     }
 }
