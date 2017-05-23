@@ -28,232 +28,253 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.gbConnections = new System.Windows.Forms.GroupBox();
-            this.btnSuchen = new System.Windows.Forms.Button();
-            this.dtpDateTime = new System.Windows.Forms.DateTimePicker();
-            this.lblDatumZeit = new System.Windows.Forms.Label();
-            this.tbBis = new System.Windows.Forms.TextBox();
-            this.lblBis = new System.Windows.Forms.Label();
-            this.tbVon = new System.Windows.Forms.TextBox();
-            this.lblVon = new System.Windows.Forms.Label();
             this.gbAbfahrtstafel = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.lblCurrentLocation = new System.Windows.Forms.Label();
-            this.gbConnections.SuspendLayout();
+            this.tafCbVon = new System.Windows.Forms.ComboBox();
+            this.tafBtnSuchen = new System.Windows.Forms.Button();
+            this.tafLblVon = new System.Windows.Forms.Label();
+            this.gbConnections = new System.Windows.Forms.GroupBox();
+            this.conCbBis = new System.Windows.Forms.ComboBox();
+            this.conCbVon = new System.Windows.Forms.ComboBox();
+            this.conBtnSuchen = new System.Windows.Forms.Button();
+            this.conDtpDateTime = new System.Windows.Forms.DateTimePicker();
+            this.conLblDatumZeit = new System.Windows.Forms.Label();
+            this.conLblBis = new System.Windows.Forms.Label();
+            this.conLblVon = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.Gleis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ankunft = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Abfahrt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dauer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Von = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvVerbindungen = new System.Windows.Forms.DataGridView();
             this.gbAbfahrtstafel.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbConnections.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVerbindungen)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(640, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(583, 61);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Swiss Public Transport";
-            // 
-            // gbConnections
-            // 
-            this.gbConnections.Controls.Add(this.btnSuchen);
-            this.gbConnections.Controls.Add(this.dtpDateTime);
-            this.gbConnections.Controls.Add(this.lblDatumZeit);
-            this.gbConnections.Controls.Add(this.tbBis);
-            this.gbConnections.Controls.Add(this.lblBis);
-            this.gbConnections.Controls.Add(this.tbVon);
-            this.gbConnections.Controls.Add(this.lblVon);
-            this.gbConnections.Location = new System.Drawing.Point(533, 146);
-            this.gbConnections.Name = "gbConnections";
-            this.gbConnections.Size = new System.Drawing.Size(826, 174);
-            this.gbConnections.TabIndex = 1;
-            this.gbConnections.TabStop = false;
-            this.gbConnections.Text = "Verbindungen suchen";
-            // 
-            // btnSuchen
-            // 
-            this.btnSuchen.Location = new System.Drawing.Point(468, 106);
-            this.btnSuchen.Name = "btnSuchen";
-            this.btnSuchen.Size = new System.Drawing.Size(293, 40);
-            this.btnSuchen.TabIndex = 4;
-            this.btnSuchen.Text = "Suchen";
-            this.btnSuchen.UseVisualStyleBackColor = true;
-            // 
-            // dtpDateTime
-            // 
-            this.dtpDateTime.CustomFormat = "dd.MM.yy HH:mm";
-            this.dtpDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDateTime.Location = new System.Drawing.Point(221, 109);
-            this.dtpDateTime.Name = "dtpDateTime";
-            this.dtpDateTime.Size = new System.Drawing.Size(236, 31);
-            this.dtpDateTime.TabIndex = 3;
-            this.dtpDateTime.ValueChanged += new System.EventHandler(this.dtpDateTime_ValueChanged);
-            // 
-            // lblDatumZeit
-            // 
-            this.lblDatumZeit.AutoSize = true;
-            this.lblDatumZeit.Location = new System.Drawing.Point(26, 109);
-            this.lblDatumZeit.Name = "lblDatumZeit";
-            this.lblDatumZeit.Size = new System.Drawing.Size(128, 25);
-            this.lblDatumZeit.TabIndex = 2;
-            this.lblDatumZeit.Text = "Datum / Zeit";
-            // 
-            // tbBis
-            // 
-            this.tbBis.Location = new System.Drawing.Point(525, 49);
-            this.tbBis.Name = "tbBis";
-            this.tbBis.Size = new System.Drawing.Size(236, 31);
-            this.tbBis.TabIndex = 2;
-            this.tbBis.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // lblBis
-            // 
-            this.lblBis.AutoSize = true;
-            this.lblBis.Location = new System.Drawing.Point(463, 52);
-            this.lblBis.Name = "lblBis";
-            this.lblBis.Size = new System.Drawing.Size(48, 25);
-            this.lblBis.TabIndex = 2;
-            this.lblBis.Text = "Bis:";
-            this.lblBis.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // tbVon
-            // 
-            this.tbVon.Location = new System.Drawing.Point(221, 52);
-            this.tbVon.Name = "tbVon";
-            this.tbVon.Size = new System.Drawing.Size(236, 31);
-            this.tbVon.TabIndex = 1;
-            // 
-            // lblVon
-            // 
-            this.lblVon.AutoSize = true;
-            this.lblVon.Location = new System.Drawing.Point(26, 52);
-            this.lblVon.Name = "lblVon";
-            this.lblVon.Size = new System.Drawing.Size(56, 25);
-            this.lblVon.TabIndex = 0;
-            this.lblVon.Text = "Von:";
             // 
             // gbAbfahrtstafel
             // 
-            this.gbAbfahrtstafel.Controls.Add(this.button1);
-            this.gbAbfahrtstafel.Controls.Add(this.textBox2);
-            this.gbAbfahrtstafel.Controls.Add(this.label4);
-            this.gbAbfahrtstafel.Location = new System.Drawing.Point(533, 390);
+            this.gbAbfahrtstafel.Controls.Add(this.tafCbVon);
+            this.gbAbfahrtstafel.Controls.Add(this.tafBtnSuchen);
+            this.gbAbfahrtstafel.Controls.Add(this.tafLblVon);
+            this.gbAbfahrtstafel.Location = new System.Drawing.Point(76, 397);
             this.gbAbfahrtstafel.Name = "gbAbfahrtstafel";
-            this.gbAbfahrtstafel.Size = new System.Drawing.Size(826, 106);
-            this.gbAbfahrtstafel.TabIndex = 5;
+            this.gbAbfahrtstafel.Size = new System.Drawing.Size(826, 153);
+            this.gbAbfahrtstafel.TabIndex = 14;
             this.gbAbfahrtstafel.TabStop = false;
             this.gbAbfahrtstafel.Text = "Abfahrtstafel erstellen";
             // 
-            // textBox2
+            // tafCbVon
             // 
-            this.textBox2.Location = new System.Drawing.Point(221, 49);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(236, 31);
-            this.textBox2.TabIndex = 5;
+            this.tafCbVon.FormattingEnabled = true;
+            this.tafCbVon.Location = new System.Drawing.Point(221, 48);
+            this.tafCbVon.Name = "tafCbVon";
+            this.tafCbVon.Size = new System.Drawing.Size(236, 33);
+            this.tafCbVon.TabIndex = 7;
+            this.tafCbVon.DropDown += new System.EventHandler(this.tafCbVon_DropDown);
             // 
-            // label4
+            // tafBtnSuchen
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 52);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 25);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Von:";
+            this.tafBtnSuchen.Location = new System.Drawing.Point(468, 43);
+            this.tafBtnSuchen.Name = "tafBtnSuchen";
+            this.tafBtnSuchen.Size = new System.Drawing.Size(293, 40);
+            this.tafBtnSuchen.TabIndex = 6;
+            this.tafBtnSuchen.Text = "Suchen";
+            this.tafBtnSuchen.UseVisualStyleBackColor = true;
+            this.tafBtnSuchen.Click += new System.EventHandler(this.tafBtnSuchen_Click);
             // 
-            // button1
+            // tafLblVon
             // 
-            this.button1.Location = new System.Drawing.Point(468, 43);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(293, 40);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Suchen";
-            this.button1.UseVisualStyleBackColor = true;
+            this.tafLblVon.AutoSize = true;
+            this.tafLblVon.Location = new System.Drawing.Point(26, 52);
+            this.tafLblVon.Name = "tafLblVon";
+            this.tafLblVon.Size = new System.Drawing.Size(56, 25);
+            this.tafLblVon.TabIndex = 0;
+            this.tafLblVon.Text = "Von:";
             // 
-            // groupBox1
+            // gbConnections
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.lblCurrentLocation);
-            this.groupBox1.Location = new System.Drawing.Point(533, 560);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(826, 112);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Verbindungen suchen";
+            this.gbConnections.Controls.Add(this.conCbBis);
+            this.gbConnections.Controls.Add(this.conCbVon);
+            this.gbConnections.Controls.Add(this.conBtnSuchen);
+            this.gbConnections.Controls.Add(this.conDtpDateTime);
+            this.gbConnections.Controls.Add(this.conLblDatumZeit);
+            this.gbConnections.Controls.Add(this.conLblBis);
+            this.gbConnections.Controls.Add(this.conLblVon);
+            this.gbConnections.Location = new System.Drawing.Point(76, 153);
+            this.gbConnections.Name = "gbConnections";
+            this.gbConnections.Size = new System.Drawing.Size(826, 184);
+            this.gbConnections.TabIndex = 12;
+            this.gbConnections.TabStop = false;
+            this.gbConnections.Text = "Verbindungen suchen";
             // 
-            // button2
+            // conCbBis
             // 
-            this.button2.Location = new System.Drawing.Point(468, 56);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(293, 40);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Suchen";
-            this.button2.UseVisualStyleBackColor = true;
+            this.conCbBis.FormattingEnabled = true;
+            this.conCbBis.Location = new System.Drawing.Point(507, 49);
+            this.conCbBis.Name = "conCbBis";
+            this.conCbBis.Size = new System.Drawing.Size(254, 33);
+            this.conCbBis.TabIndex = 6;
+            this.conCbBis.DropDown += new System.EventHandler(this.conCbBis_DropDown);
             // 
-            // textBox3
+            // conCbVon
             // 
-            this.textBox3.Location = new System.Drawing.Point(221, 58);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(236, 31);
-            this.textBox3.TabIndex = 7;
+            this.conCbVon.FormattingEnabled = true;
+            this.conCbVon.Location = new System.Drawing.Point(221, 49);
+            this.conCbVon.Name = "conCbVon";
+            this.conCbVon.Size = new System.Drawing.Size(236, 33);
+            this.conCbVon.TabIndex = 5;
+            this.conCbVon.DropDown += new System.EventHandler(this.conCbVon_DropDown);
             // 
-            // lblCurrentLocation
+            // conBtnSuchen
             // 
-            this.lblCurrentLocation.AutoSize = true;
-            this.lblCurrentLocation.Location = new System.Drawing.Point(26, 64);
-            this.lblCurrentLocation.Name = "lblCurrentLocation";
-            this.lblCurrentLocation.Size = new System.Drawing.Size(189, 25);
-            this.lblCurrentLocation.TabIndex = 0;
-            this.lblCurrentLocation.Text = "Aktueller Standort:";
-            this.lblCurrentLocation.Click += new System.EventHandler(this.label5_Click);
+            this.conBtnSuchen.Location = new System.Drawing.Point(468, 106);
+            this.conBtnSuchen.Name = "conBtnSuchen";
+            this.conBtnSuchen.Size = new System.Drawing.Size(293, 40);
+            this.conBtnSuchen.TabIndex = 4;
+            this.conBtnSuchen.Text = "Suchen";
+            this.conBtnSuchen.UseVisualStyleBackColor = true;
+            this.conBtnSuchen.Click += new System.EventHandler(this.btnSuchen_Click);
+            // 
+            // conDtpDateTime
+            // 
+            this.conDtpDateTime.CustomFormat = "dd.MM.yy HH:mm";
+            this.conDtpDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.conDtpDateTime.Location = new System.Drawing.Point(221, 109);
+            this.conDtpDateTime.Name = "conDtpDateTime";
+            this.conDtpDateTime.Size = new System.Drawing.Size(236, 31);
+            this.conDtpDateTime.TabIndex = 3;
+            // 
+            // conLblDatumZeit
+            // 
+            this.conLblDatumZeit.AutoSize = true;
+            this.conLblDatumZeit.Location = new System.Drawing.Point(26, 109);
+            this.conLblDatumZeit.Name = "conLblDatumZeit";
+            this.conLblDatumZeit.Size = new System.Drawing.Size(128, 25);
+            this.conLblDatumZeit.TabIndex = 2;
+            this.conLblDatumZeit.Text = "Datum / Zeit";
+            // 
+            // conLblBis
+            // 
+            this.conLblBis.AutoSize = true;
+            this.conLblBis.Location = new System.Drawing.Point(463, 52);
+            this.conLblBis.Name = "conLblBis";
+            this.conLblBis.Size = new System.Drawing.Size(48, 25);
+            this.conLblBis.TabIndex = 2;
+            this.conLblBis.Text = "Bis:";
+            // 
+            // conLblVon
+            // 
+            this.conLblVon.AutoSize = true;
+            this.conLblVon.Location = new System.Drawing.Point(26, 52);
+            this.conLblVon.Name = "conLblVon";
+            this.conLblVon.Size = new System.Drawing.Size(56, 25);
+            this.conLblVon.TabIndex = 0;
+            this.conLblVon.Text = "Von:";
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(199, 51);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(583, 61);
+            this.lblTitle.TabIndex = 11;
+            this.lblTitle.Text = "Swiss Public Transport";
+            // 
+            // Gleis
+            // 
+            this.Gleis.HeaderText = "Gleis";
+            this.Gleis.Name = "Gleis";
+            // 
+            // Ankunft
+            // 
+            this.Ankunft.HeaderText = "Ankunft";
+            this.Ankunft.Name = "Ankunft";
+            // 
+            // Abfahrt
+            // 
+            this.Abfahrt.HeaderText = "Abfahrt";
+            this.Abfahrt.Name = "Abfahrt";
+            // 
+            // Dauer
+            // 
+            this.Dauer.HeaderText = "Dauer";
+            this.Dauer.Name = "Dauer";
+            // 
+            // Bis
+            // 
+            this.Bis.HeaderText = "Bis";
+            this.Bis.Name = "Bis";
+            this.Bis.Width = 150;
+            // 
+            // Von
+            // 
+            this.Von.HeaderText = "Von";
+            this.Von.Name = "Von";
+            this.Von.Width = 150;
+            // 
+            // dgvVerbindungen
+            // 
+            this.dgvVerbindungen.AllowUserToOrderColumns = true;
+            this.dgvVerbindungen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVerbindungen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Von,
+            this.Bis,
+            this.Dauer,
+            this.Abfahrt,
+            this.Ankunft,
+            this.Gleis});
+            this.dgvVerbindungen.Location = new System.Drawing.Point(76, 588);
+            this.dgvVerbindungen.Name = "dgvVerbindungen";
+            this.dgvVerbindungen.RowTemplate.Height = 33;
+            this.dgvVerbindungen.ShowRowErrors = false;
+            this.dgvVerbindungen.Size = new System.Drawing.Size(826, 280);
+            this.dgvVerbindungen.TabIndex = 16;
             // 
             // SPT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1848, 825);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(966, 917);
+            this.Controls.Add(this.dgvVerbindungen);
             this.Controls.Add(this.gbAbfahrtstafel);
             this.Controls.Add(this.gbConnections);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTitle);
             this.Name = "SPT";
             this.Text = "SPT";
-            this.gbConnections.ResumeLayout(false);
-            this.gbConnections.PerformLayout();
             this.gbAbfahrtstafel.ResumeLayout(false);
             this.gbAbfahrtstafel.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbConnections.ResumeLayout(false);
+            this.gbConnections.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVerbindungen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox gbConnections;
-        private System.Windows.Forms.Label lblVon;
-        private System.Windows.Forms.TextBox tbVon;
-        private System.Windows.Forms.TextBox tbBis;
-        private System.Windows.Forms.Label lblBis;
-        private System.Windows.Forms.Button btnSuchen;
-        private System.Windows.Forms.DateTimePicker dtpDateTime;
-        private System.Windows.Forms.Label lblDatumZeit;
         private System.Windows.Forms.GroupBox gbAbfahrtstafel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label lblCurrentLocation;
+        private System.Windows.Forms.Button tafBtnSuchen;
+        private System.Windows.Forms.Label tafLblVon;
+        private System.Windows.Forms.GroupBox gbConnections;
+        private System.Windows.Forms.Button conBtnSuchen;
+        private System.Windows.Forms.DateTimePicker conDtpDateTime;
+        private System.Windows.Forms.Label conLblDatumZeit;
+        private System.Windows.Forms.Label conLblBis;
+        private System.Windows.Forms.Label conLblVon;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gleis;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ankunft;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Abfahrt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dauer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bis;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Von;
+        private System.Windows.Forms.DataGridView dgvVerbindungen;
+        private System.Windows.Forms.ComboBox tafCbVon;
+        private System.Windows.Forms.ComboBox conCbBis;
+        private System.Windows.Forms.ComboBox conCbVon;
     }
 }
 
